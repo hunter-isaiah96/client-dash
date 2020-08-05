@@ -12,6 +12,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MetroGridComponent } from './metro-grid/metro-grid.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { CommentsComponent } from './components/comments/comments.component';
     AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,
+    ScullyLibModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
