@@ -1,0 +1,79 @@
+header {
+  background-color: var(--light-color);
+  color: var(--dark-mute-text-color);
+  .controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .user-controls {
+    border-bottom: none;
+  }
+  .navigation {
+    display: flex;
+    margin: 0 auto;
+    padding: 25px 18%;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-style: solid none;
+
+    text-align: center;
+
+    li {
+      flex: 1;
+      font-size: 0.85em;
+      transition: opacity ease-in-out 0.2s;
+      &.active {
+        color: white;
+      }
+    }
+  }
+
+  a {
+    text-decoration: none;
+    padding: 10px;
+  }
+}
+
+.write-post {
+  padding: 10px 20px;
+  font-size: 0.8em;
+  border: 2px solid var(--dark-mute-text-color);
+  border-radius: 1.5em;
+  transition: all 0.15s;
+  &:hover {
+    color: #fff;
+    border-color: #fff;
+  }
+  span {
+    margin-left: 10px;
+  }
+}
+
+.doughnut-wrapper {
+  flex: 1;
+}
+
+.doughnut {
+  $doughnut-size: 10px;
+  $donut-radius: $doughnut-size * 3;
+  height: $donut-radius;
+  width: $donut-radius;
+  margin: 0 auto;
+  box-sizing: unset;
+  border: $doughnut-size solid white;
+  border-radius: $donut-radius;
+}
+
+.nav-item {
+  font-size: 1.1em;
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}

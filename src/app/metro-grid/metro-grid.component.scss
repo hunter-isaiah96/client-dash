@@ -1,0 +1,129 @@
+$overlay-color: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+
+@mixin clamp-line($lines: 2) {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  overflow: hidden;
+}
+
+.article-tiles {
+  $grid-rows: 175px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: $grid-rows $grid-rows $grid-rows $grid-rows $grid-rows * 2.3;
+  gap: 35px;
+  grid-template-areas: "main-tile-1 main-tile-1 small-tile-2 small-tile-3" "main-tile-1 main-tile-1 small-tile-4 small-tile-5" "long-tile-6 long-tile-6 long-tile-7 long-tile-7" "long-tile-8 long-tile-8 long-tile-9 long-tile-9" "card-10 card-11 card-12 card-13";
+  .article-tile:first-child {
+    grid-area: main-tile-1;
+    align-items: flex-end;
+    background: $overlay-color, var(--main-tile-image) no-repeat center;
+    background-size: cover;
+    .article-author {
+      margin-top: 30px;
+    }
+    .article-image {
+      display: none;
+    }
+
+    .catch {
+      margin: 10px 0;
+    }
+  }
+
+  // Small Tile Styles
+  @for $i from 2 through 5 {
+    .article-tile:nth-child(#{$i}) {
+      grid-area: small-tile-#{$i};
+      .tile-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .article-image {
+        display: none;
+      }
+      .catch {
+        display: none;
+      }
+    }
+  }
+
+  // Long Tile Styles
+  @for $i from 6 through 9 {
+    .article-tile:nth-child(#{$i}) {
+      grid-area: long-tile-#{$i};
+      .article-image {
+        max-width: 30%;
+      }
+      .catch {
+        display: none;
+      }
+    }
+  }
+
+  // Short and Long Tile with image Background
+  .article-tile:nth-child(3),
+  .article-tile:nth-child(7) {
+    position: relative;
+    .article-image {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      max-width: 100%;
+    }
+    .tile-info {
+      z-index: 1;
+      background: $overlay-color;
+    }
+  }
+  .article-tile:nth-child(7) {
+    .catch {
+      @include clamp-line(1);
+    }
+  }
+  // Card Tiles
+  @for $i from 10 through 13 {
+    .article-tile:nth-child(#{$i}) {
+      grid-area: card-#{$i};
+      flex-direction: column;
+      .article-image {
+        max-width: 100%;
+        height: 45%;
+      }
+    }
+  }
+}
+
+.article-tile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  background: #31394c;
+  .article-image {
+    object-fit: cover;
+  }
+  .tile-info {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+  }
+  .catch {
+    @include clamp-line(1);
+    font-weight: 300;
+    opacity: 0.9;
+    font-size: 0.9em;
+  }
+  .title {
+    font-weight: 500;
+    margin: 0;
+    line-height: 2.3;
+    @include clamp-line(2);
+  }
+}

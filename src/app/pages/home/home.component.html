@@ -1,0 +1,31 @@
+<div class="main-wrapper">
+  <div class="filters">
+    <div class="page-title">
+      <fa-icon class="star" [icon]="faStar"></fa-icon>Popular
+    </div>
+    <form class="categories">
+      <input
+        type="radio"
+        id="articles"
+        name="post-type"
+        value="articles"
+        checked
+      />
+      <label for="articles">Articles</label><br />
+      <input type="radio" id="channels" name="post-type" value="channels" />
+      <label for="channels">Channels</label><br />
+      <input type="radio" id="authors" name="post-type" value="authors" />
+      <label for="authors">Authors</label>
+    </form>
+    <div class="sort">
+      <span class="sort-label">Sort by:</span>
+      <button>
+        <span>Date</span><fa-icon [icon]="faChevronDown"></fa-icon>
+      </button>
+    </div>
+  </div>
+  <app-metro-grid [articles]="articles"></app-metro-grid>
+  <button class="see-more outline">
+    See More
+  </button>
+</div>

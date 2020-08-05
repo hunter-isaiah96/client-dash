@@ -1,0 +1,1 @@
+GET https://newsapi.org/v2/everything?q=tech&from=2020-07-29&to=2020-07-29&sortBy=popularity&apiKey=2b9e2ae1c65c48658f5cfefbccff07b0 HTTP/1.1

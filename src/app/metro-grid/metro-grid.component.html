@@ -1,0 +1,25 @@
+<div class="article-tiles">
+  <a
+    href="#"
+    class="article-tile"
+    *ngFor="let article of articles | async"
+    [style]="'--main-tile-image: url(' + article.urlToImage + ');'"
+  >
+    <img class="article-image" [src]="article.urlToImage" />
+    <div class="tile-info">
+      <h4 class="title">{{ article.title }}</h4>
+      <span class="catch">{{ article.description }}</span>
+      <div class="article-author">
+        <img
+          src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+          alt="Article profile picture"
+        />
+        <div class="details">
+          <p class="author">{{ article.author }}</p>
+          <p class="caption">Aug 15</p>
+        </div>
+        <fa-icon class="bookmark" [icon]="faBookmark"></fa-icon>
+      </div>
+    </div>
+  </a>
+</div>

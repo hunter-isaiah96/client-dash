@@ -1,1 +1,102 @@
 /* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --light-color: #31394c;
+  --dark-color: #212735;
+  --dark-mute-text-color: rgba(255, 255, 255, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  $default-text: rgb(255, 255, 255);
+  cursor: pointer;
+  color: inherit;
+  background: none;
+  outline: none;
+  border: none;
+  font: unset;
+  &.outline {
+    padding: 10px 30px;
+    font-size: 0.8em;
+    color: $default-text;
+    border: 2px solid var(--dark-mute-text-color);
+    border-radius: 1.5em;
+    opacity: 0.35;
+    transition: opacity ease-in-out 0.2s;
+    &:hover {
+      opacity: 1;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}
+
+// Global Component Styles
+.article-author {
+  display: flex;
+  align-items: center;
+  p {
+    margin: 0;
+  }
+
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+  .details {
+    flex: 1;
+    margin-left: 20px;
+  }
+  .author {
+    font-size: 0.9em;
+  }
+  .caption {
+    font-size: 0.8em;
+    font-weight: 300;
+    color: var(--dark-mute-text-color);
+    margin-top: 10px;
+  }
+}
+
+.main-wrapper {
+  width: 75%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.bookmark {
+  color: #6f7283;
+  font-size: 1.3em;
+}
+
+.spacer {
+  flex: 1;
+}

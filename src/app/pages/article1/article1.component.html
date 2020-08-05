@@ -1,0 +1,83 @@
+<article class="main-wrapper">
+  <h2 class="title">Travel Prudently Luggage And Carry On Worries</h2>
+  <p class="catch">02 Sep 2022 - Make Money Online Through Advertising</p>
+  <div class="article-author">
+    <img
+      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+      alt="Cooking Indian Food At Home Where To Start"
+    />
+    <div class="details">
+      <p class="author">Lora Stevenson</p>
+    </div>
+    <fa-icon class="bookmark" [icon]="faBookmark"></fa-icon>
+  </div>
+  <img
+    class="main-image"
+    src="https://assets.materialup.com/uploads/b992213c-a8a1-4fa7-b2e7-62a04dfbb907/attachment.jpg"
+  />
+  <div class="image-alt">
+    <fa-icon class="edit" [icon]="faPen"></fa-icon>
+    <span>Cooking Indian Food At Home Where To Start</span>
+  </div>
+  <div class="content-wrapper">
+    <ul class="share">
+      <li>Share</li>
+      <li class="share-button">
+        <a href="#"><fa-icon [icon]="faHeart"></fa-icon></a>
+      </li>
+      <li class="share-button">
+        <a href="#"><fa-icon [icon]="faFacebookF"></fa-icon></a>
+      </li>
+      <li class="share-button">
+        <a href="#"><fa-icon [icon]="faTwitter"></fa-icon></a>
+      </li>
+    </ul>
+    <div class="content">
+      <p>{{ lorem.generateParagraphs(2) }}</p>
+      <blockquote>
+        {{ lorem.generateParagraphs(2) }}
+      </blockquote>
+      <h3>7 Ways To Advertise Your Business For Free</h3>
+      <p>{{ lorem.generateParagraphs(2) }}</p>
+      <img src="https://images4.alphacoders.com/844/thumb-1920-844967.jpg" />
+      <p>{{ lorem.generateParagraphs(2) }}</p>
+    </div>
+  </div>
+  <div class="article-meta">
+    <a href="#">
+      <fa-icon [icon]="faHeart"></fa-icon>
+      <span>16</span>
+    </a>
+    <a href="#">
+      <fa-icon [icon]="faCommentAlt"></fa-icon>
+      <span>12</span>
+    </a>
+    <div class="spacer"></div>
+    <div class="tags">
+      <a href="#" *ngFor="let tag of [1, 2, 3, 4, 5]">
+        #{{ lorem.generateWords(1) }}
+      </a>
+    </div>
+    <div class="spacer"></div>
+    <a href="#">
+      <fa-icon [icon]="faTwitter"></fa-icon>
+    </a>
+    <a href="#">
+      <fa-icon [icon]="faFacebookF"></fa-icon>
+    </a>
+  </div>
+  <div class="article-author article-footer">
+    <img
+      src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+      alt="Cooking Indian Food At Home Where To Start"
+    />
+    <div class="details">
+      <p class="author">Lora Stevenson</p>
+      <p class="caption">
+        Journalist and UI/UX Designer, and Art Director of PixelsTeam
+      </p>
+    </div>
+    <button class="outline">Follow</button>
+  </div>
+</article>
+<app-comments></app-comments>

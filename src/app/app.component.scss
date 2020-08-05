@@ -1,0 +1,47 @@
+@mixin scrollbars(
+  $size,
+  $foreground-color,
+  $background-color: mix($foreground-color, white, 50%)
+) {
+  // For Google Chrome
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $foreground-color;
+    border-radius: 20px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $background-color;
+    border-radius: 20px;
+  }
+
+  // For Internet Explorer
+  & {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
+  }
+}
+
+.main-content {
+  &:not(.dark) {
+    background-color: #31394c;
+    @include scrollbars(5px, #212735, transparent);
+  }
+  &.dark {
+    background-color: #212735;
+    @include scrollbars(5px, #31394c, transparent);
+  }
+  flex: 1;
+  overflow-y: auto;
+}
+
+.app-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
