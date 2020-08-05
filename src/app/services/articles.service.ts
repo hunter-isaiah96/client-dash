@@ -9,7 +9,7 @@ import { Article, ArticleRoot } from '../models/article/article.model';
 })
 export class ArticlesService {
   mainURL =
-    'http://newsapi.org/v2/everything?q=bitcoin&from=2020-07-04&sortBy=publishedAt&apiKey=2b9e2ae1c65c48658f5cfefbccff07b0';
+    'https://newsapi.org/v2/everything?q=bitcoin&from=2020-07-04&sortBy=publishedAt&apiKey=2b9e2ae1c65c48658f5cfefbccff07b0';
   newsApi = `${this.mainURL}&pageSize=13`;
 
   constructor(private http: HttpClient) {}
