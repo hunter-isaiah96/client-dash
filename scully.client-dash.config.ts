@@ -1,8 +1,7 @@
 import { ScullyConfig } from '@scullyio/scully';
 export const config: ScullyConfig = {
-  projectRoot: "./src",
-  projectName: "client-dash",
+  projectRoot: './src',
+  projectName: 'client-dash',
   outDir: './dist/static',
-  routes: {
-  }
+  routes: {},
 };

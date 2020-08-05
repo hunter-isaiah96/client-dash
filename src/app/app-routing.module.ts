@@ -9,7 +9,11 @@ const routes: Routes = [
     data: { dark: true },
     component: HomeComponent,
   },
-  { path: 'article/:id', component: Article1Component, data: { dark: false } },
+  {
+    path: 'article/preview',
+    component: Article1Component,
+    data: { dark: false },
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,3 @@
+Could not fetch data for route "[33m/article/:id[39m"
+Error during file write
+Error: ENOENT: no such file or directory, mkdir 'C:\Users\djrhy\client-dash\dist\static\article\:id'
