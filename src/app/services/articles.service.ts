@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { Article, ArticleRoot } from '../models/article/article.model';
-
 @Injectable({
   providedIn: 'root',
 })
@@ -16,7 +15,7 @@ export class ArticlesService {
 
   getArticles(): Observable<Article[]> {
     return this.http
-      .get<ArticleRoot>(this.newsApi)
+      .get<ArticleRoot>('assets/newsapi.json')
       .pipe(switchMap((data) => of(data.articles)));
   }
 }
