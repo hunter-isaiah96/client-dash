@@ -4,4 +4,5 @@ export const config: ScullyConfig = {
   projectName: 'client-dash',
   outDir: './dist/static',
   routes: {},
+  extraRoutes: ['/article/preview'],
 };

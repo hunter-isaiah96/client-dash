@@ -1,3 +1,15 @@
 Could not fetch data for route "[33m/article/:id[39m"
 Error during file write
 Error: ENOENT: no such file or directory, mkdir 'C:\Users\djrhy\client-dash\dist\static\article\:id'
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "[33mnpm run scully -- --scanRoutes[39m"
+----------------------------------No configuration for route "[33m/article/:id[39m" found. Skipping
+
+
+----------------------------------
+Using stored unhandled routes!.
+   To discover new routes in the angular app use "[33mnpm run scully -- --scanRoutes[39m"
+----------------------------------No configuration for route "[33m/article/:id[39m" found. Skipping
+
